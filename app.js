@@ -13,6 +13,15 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+
+app.get('/register', function (req, res) {
+  res.render('register', { title: 'Регистрация'})
+})
+
+app.get('/login', function (req, res) {
+  res.render('login', { title: 'Главная страница'})
+})
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+    head
+        style
+            include index.css
+        meta(charset='UTF-8')
+        title= title
+        link(href='../index.css', rel='stylesheet')
+    body
+        ul#menu
+            li
+                a(href='register') Регистрация
+            li.active
+                a(href='login') Вход
+        form(method='post')
+            #login
+                p  Логин:
+                input(type='text', name='login', size='40')
+                p  Пароль:
+                input(type='text', name='password', size='40')
+                p
+                    input(type='submit', value='Войти')
